@@ -501,7 +501,7 @@ export class HeaderContainerComponent implements OnInit {
    */
   ngOnInit() {
   }
-  
+
   /**
    * Dispatch a navigate event
    * @param link the link to navigate to
@@ -554,7 +554,7 @@ export class HeaderContainerComponent implements OnInit {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><ng-container [ngSwitch]="header$|async">  <app-simple-header-presenter *ngSwitchCase="headerMap.simple" [title]="title$|async" [links]="links$|async" (navigateEvent)="navigate($event)"></app-simple-header-presenter>  <app-simple-header-presenter *ngSwitchDefault [title]="title$|async" [links]="links$|async" (navigateEvent)="navigate($event)"></app-simple-header-presenter></ng-container></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'HeaderContainerComponent', 'selector': 'app-header-container'},{'name': 'LayoutContainerComponent', 'selector': 'app-layout-container'},{'name': 'SimpleHeaderPresenterComponent', 'selector': 'app-simple-header-presenter'},{'name': 'SimpleLayoutPresenterComponent', 'selector': 'app-simple-layout-presenter'}];
+    var COMPONENTS = [{'name': 'AboutPageComponent', 'selector': 'app-about-page'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'HeaderContainerComponent', 'selector': 'app-header-container'},{'name': 'HomePageComponent', 'selector': 'app-home-page'},{'name': 'LayoutContainerComponent', 'selector': 'app-layout-container'},{'name': 'NotFoundPageComponent', 'selector': 'app-not-found-page'},{'name': 'SimpleHeaderPresenterComponent', 'selector': 'app-simple-header-presenter'},{'name': 'SimpleLayoutPresenterComponent', 'selector': 'app-simple-layout-presenter'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'HeaderContainerComponent'};
 </script>

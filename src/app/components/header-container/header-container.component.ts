@@ -43,7 +43,7 @@ export class HeaderContainerComponent implements OnInit {
    */
   ngOnInit() {
   }
-  
+
   /**
    * Dispatch a navigate event
    * @param link the link to navigate to

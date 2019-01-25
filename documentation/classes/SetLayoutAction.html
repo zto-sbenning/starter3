@@ -63,6 +63,13 @@
             <code>src/app/stores/stores/layout/layout.actions.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Action to set the Layout type</p>
+
+            </p>
 
 
             <p class="comment">
@@ -116,12 +123,14 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/stores/stores/layout/layout.actions.ts:10</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/stores/stores/layout/layout.actions.ts:19</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Action constructor</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -130,6 +139,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -144,6 +154,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <code><p>the new Layout type</p>
+</code>
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -187,10 +201,15 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/stores/stores/layout/layout.actions.ts:11</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/stores/stores/layout/layout.actions.ts:24</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description">the new Layout type</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -220,10 +239,16 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/stores/stores/layout/layout.actions.ts:10</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/stores/stores/layout/layout.actions.ts:19</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The action identifier</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -242,19 +267,41 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Action } from &#x27;@ngrx/store&#x27;;
 import { Layout } from &#x27;./layout.state&#x27;;
 
+/**
+ * All Layout Action types
+ */
 export enum LayoutActionType {
-    set &#x3D; &#x27;[Layout Action Type] Set&#x27;,
-    simple &#x3D; &#x27;[Layout Action Type] Simple&#x27;,
+  set &#x3D; &#x27;[Layout Action Type] Set&#x27;,
+  simple &#x3D; &#x27;[Layout Action Type] Simple&#x27;
 }
 
+/**
+ * Action to set the Layout type
+ */
 export class SetLayoutAction implements Action {
-    type &#x3D; LayoutActionType.set;
-    constructor(public payload: { layout: Layout }) {}
+  /**
+   * The action identifier
+   */
+  type &#x3D; LayoutActionType.set;
+  /**
+   * Action constructor
+   * @param payload the new Layout type
+   */
+  constructor(public payload: { layout: Layout }) {}
 }
+/**
+ * Action to set the Layout type to Layout.simple
+ */
 export class SimpleLayoutAction implements Action {
-    type &#x3D; LayoutActionType.simple;
+  /**
+   * The action identifier
+   */
+  type &#x3D; LayoutActionType.simple;
 }
 
+/**
+ * Union for all Layout Actions
+ */
 export type LayoutActions &#x3D; SetLayoutAction | SimpleLayoutAction;
 </code></pre>
     </div>

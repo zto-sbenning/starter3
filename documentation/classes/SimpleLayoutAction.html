@@ -63,6 +63,13 @@
             <code>src/app/stores/stores/layout/layout.actions.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Action to set the Layout type to Layout.simple</p>
+
+            </p>
 
 
             <p class="comment">
@@ -133,10 +140,16 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/stores/stores/layout/layout.actions.ts:14</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/stores/stores/layout/layout.actions.ts:33</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The action identifier</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -155,19 +168,41 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Action } from &#x27;@ngrx/store&#x27;;
 import { Layout } from &#x27;./layout.state&#x27;;
 
+/**
+ * All Layout Action types
+ */
 export enum LayoutActionType {
-    set &#x3D; &#x27;[Layout Action Type] Set&#x27;,
-    simple &#x3D; &#x27;[Layout Action Type] Simple&#x27;,
+  set &#x3D; &#x27;[Layout Action Type] Set&#x27;,
+  simple &#x3D; &#x27;[Layout Action Type] Simple&#x27;
 }
 
+/**
+ * Action to set the Layout type
+ */
 export class SetLayoutAction implements Action {
-    type &#x3D; LayoutActionType.set;
-    constructor(public payload: { layout: Layout }) {}
+  /**
+   * The action identifier
+   */
+  type &#x3D; LayoutActionType.set;
+  /**
+   * Action constructor
+   * @param payload the new Layout type
+   */
+  constructor(public payload: { layout: Layout }) {}
 }
+/**
+ * Action to set the Layout type to Layout.simple
+ */
 export class SimpleLayoutAction implements Action {
-    type &#x3D; LayoutActionType.simple;
+  /**
+   * The action identifier
+   */
+  type &#x3D; LayoutActionType.simple;
 }
 
+/**
+ * Union for all Layout Actions
+ */
 export type LayoutActions &#x3D; SetLayoutAction | SimpleLayoutAction;
 </code></pre>
     </div>

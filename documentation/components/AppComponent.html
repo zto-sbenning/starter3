@@ -64,6 +64,13 @@
     <code>src/app/app.component.ts</code>
 </p>
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Root component</p>
+
+    </p>
 
 
 
@@ -182,10 +189,16 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/app.component.ts:12</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/app.component.ts:15</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Root title</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -197,15 +210,18 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
 
+/**
+ * Root component
+ */
 @Component({
   selector: &#x27;app-root&#x27;,
   templateUrl: &#x27;./app.component.html&#x27;,
   styleUrls: [&#x27;./app.component.css&#x27;]
 })
-/**
- * Root component
- */
 export class AppComponent {
+  /**
+   * Root title
+   */
   title &#x3D; &#x27;zto-full-starter&#x27;;
 }
 </code></pre>
@@ -251,7 +267,7 @@ export class AppComponent {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><!--The content below is only a placeholder and can be replaced.--><app-layout-container></app-layout-container></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'HeaderContainerComponent', 'selector': 'app-header-container'},{'name': 'LayoutContainerComponent', 'selector': 'app-layout-container'},{'name': 'SimpleHeaderPresenterComponent', 'selector': 'app-simple-header-presenter'},{'name': 'SimpleLayoutPresenterComponent', 'selector': 'app-simple-layout-presenter'}];
+    var COMPONENTS = [{'name': 'AboutPageComponent', 'selector': 'app-about-page'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'HeaderContainerComponent', 'selector': 'app-header-container'},{'name': 'HomePageComponent', 'selector': 'app-home-page'},{'name': 'LayoutContainerComponent', 'selector': 'app-layout-container'},{'name': 'NotFoundPageComponent', 'selector': 'app-not-found-page'},{'name': 'SimpleHeaderPresenterComponent', 'selector': 'app-simple-header-presenter'},{'name': 'SimpleLayoutPresenterComponent', 'selector': 'app-simple-layout-presenter'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppComponent'};
 </script>

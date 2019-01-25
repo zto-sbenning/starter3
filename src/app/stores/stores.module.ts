@@ -6,6 +6,9 @@ import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { reducers, effects } from './stores';
 
+/**
+ * Load all Redux Stores via index.ts file
+ */
 @NgModule({
   imports: [
     CommonModule,

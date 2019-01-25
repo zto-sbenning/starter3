@@ -59,6 +59,13 @@
             <code>src/app/stores/stores/header/header.effects.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Header store effects</p>
+
+            </p>
 
 
             <section>
@@ -73,14 +80,6 @@
                 <tr>
                     <td class="col-md-4">
                         <ul class="index-list">
-                            <li>
-                                    <span class="modifier">Public</span>
-                                <a href="#actions">actions</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Public</span>
-                                <a href="#header">header</a>
-                            </li>
                             <li>
                                 <a href="#navigate$">navigate$</a>
                             </li>
@@ -97,66 +96,6 @@
     </table>
 </section>
 
-            <section>
-    <h3 id="constructor">Constructor</h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-<code>constructor(actions: Actions, header: <a href="../injectables/HeaderService.html">HeaderService</a>)</code>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/stores/stores/header/header.effects.ts:8</a></div>
-                            </td>
-                        </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                            <div>
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                    <td>Type</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>actions</td>
-                                                  
-                                                        <td>
-                                                                    <code>Actions</code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                        <td>header</td>
-                                                  
-                                                        <td>
-                                                                    <code><a href="../injectables/HeaderService.html" target="_self" >HeaderService</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-</section>
 
 
             <section>
@@ -164,76 +103,6 @@
         <h3 id="inputs">
             Properties
         </h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="actions"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Public</span>
-                            actions
-                            </b>
-                            <a href="#actions"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <span class="modifier-icon icon ion-ios-reset"></span><code>actions:     <code>Actions</code>
-</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code>Actions</code>
-
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/stores/stores/header/header.effects.ts:10</a></div>
-                            </td>
-                        </tr>
-
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="header"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Public</span>
-                            header
-                            </b>
-                            <a href="#header"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <span class="modifier-icon icon ion-ios-reset"></span><code>header:     <code><a href="../injectables/HeaderService.html" target="_self" >HeaderService</a></code>
-</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code><a href="../injectables/HeaderService.html" target="_self" >HeaderService</a></code>
-
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/stores/stores/header/header.effects.ts:11</a></div>
-                            </td>
-                        </tr>
-
-
-            </tbody>
-        </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
@@ -256,8 +125,9 @@
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>this.actions.pipe(
-        ofType(HeaderActionType.navigate),
-        tap((action: NavigateAction) &#x3D;&gt; this.header.doNavigate(action.payload.link.path)),
+      ofType(HeaderActionType.navigate),
+      filter((action: NavigateAction) &#x3D;&gt; !this.header.isActive(action.payload.link.path)),
+      tap((action: NavigateAction) &#x3D;&gt; this.header.doNavigate(action.payload.link.path)),
     )</code>
                         </td>
                     </tr>
@@ -272,10 +142,17 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/stores/stores/header/header.effects.ts:14</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/stores/stores/header/header.effects.ts:24</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>An effect to map a NavigateAction to a router.navigate call
+if the path in the action is not active</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -285,22 +162,33 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &quot;@angular/core&quot;;
-import { Actions, Effect, ofType } from &quot;@ngrx/effects&quot;;
-import { tap } from &#x27;rxjs/operators&#x27;;
-import { HeaderService } from &quot;../../../services/header/header.service&quot;;
-import { HeaderActionType, NavigateAction } from &quot;./header.actions&quot;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+import { Actions, Effect, ofType } from &#x27;@ngrx/effects&#x27;;
+import { tap, filter } from &#x27;rxjs/operators&#x27;;
+import { HeaderService } from &#x27;../../../services/header/header.service&#x27;;
+import { HeaderActionType, NavigateAction } from &#x27;./header.actions&#x27;;
 
+/**
+ * Header store effects
+ */
 @Injectable()
 export class HeaderEffects {
+  /**
+   * @ignore
+   */
     constructor(
         public actions: Actions,
         public header: HeaderService
-    ) {}
+  ) { }
+  /**
+   * An effect to map a NavigateAction to a router.navigate call
+   * if the path in the action is not active
+   */
     @Effect({ dispatch: false })
     navigate$ &#x3D; this.actions.pipe(
-        ofType(HeaderActionType.navigate),
-        tap((action: NavigateAction) &#x3D;&gt; this.header.doNavigate(action.payload.link.path)),
+      ofType(HeaderActionType.navigate),
+      filter((action: NavigateAction) &#x3D;&gt; !this.header.isActive(action.payload.link.path)),
+      tap((action: NavigateAction) &#x3D;&gt; this.header.doNavigate(action.payload.link.path)),
     );
 
 }

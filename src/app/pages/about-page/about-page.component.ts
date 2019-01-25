@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 /**
- * @ignore
+ * About page Component
  */
 @Component({
   selector: 'app-about-page',
@@ -10,8 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutPageComponent implements OnInit {
 
+  /**
+   * @ignore
+   */
   constructor() { }
 
+  /**
+   * @ignore
+   */
   ngOnInit() {
   }
 

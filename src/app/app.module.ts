@@ -6,10 +6,15 @@ import { SharedModule } from './shared/shared.module';
 import { ArchModule } from './arch/arch.module';
 import { HeaderService } from './services/header/header.service';
 import { LayoutService } from './services/layout/layout.service';
-import { PagesModule } from './pages/pages.module';
-import { ComponentsModule } from './components/components.module';
 import { StoresModule } from './stores/stores.module';
+import { HomePageModule } from './pages/home-page/home-page.module';
+import { AboutPageModule } from './pages/about-page/about-page.module';
+import { NotFoundPageModule } from './pages/not-found-page/not-found-page.module';
+import { ComponentsModule } from './components/components.module';
 
+/**
+ * Root Module
+ */
 @NgModule({
   declarations: [
     AppComponent
@@ -19,8 +24,10 @@ import { StoresModule } from './stores/stores.module';
     SharedModule,
     ArchModule,
     StoresModule,
-    PagesModule,
-    ComponentsModule
+    ComponentsModule,
+    HomePageModule,
+    AboutPageModule,
+    NotFoundPageModule
   ],
   providers: [
     HeaderService,

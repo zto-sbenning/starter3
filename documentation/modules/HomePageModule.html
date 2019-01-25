@@ -34,7 +34,7 @@
 
 <ol class="breadcrumb">
     <li>Modules</li>
-    <li>StoresModule</li>
+    <li>HomePageModule</li>
 </ol>
 
 <div class="text-center module-graph-container">
@@ -62,42 +62,30 @@
 <polygon fill="#fb8072" stroke="transparent" points="406,-10 406,-30 426,-30 426,-10 406,-10"/>
 <text text-anchor="start" x="429.7258" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Exports</text>
 <g id="clust1" class="cluster">
-<title>cluster_StoresModule</title>
-<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="91,-70 91,-195 405,-195 405,-70 91,-70"/>
+<title>cluster_HomePageModule</title>
+<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="161,-70 161,-195 335,-195 335,-70 161,-70"/>
 </g>
-<g id="clust6" class="cluster">
-<title>cluster_StoresModule_providers</title>
-<polygon fill="none" stroke="#000000" points="99,-78 99,-130 397,-130 397,-78 99,-78"/>
+<g id="clust2" class="cluster">
+<title>cluster_HomePageModule_declarations</title>
+<polygon fill="none" stroke="#000000" points="169,-78 169,-130 327,-130 327,-78 169,-78"/>
 </g>
-<!-- HeaderEffects -->
+<!-- HomePageComponent -->
 <g id="node1" class="node">
-<title>HeaderEffects</title>
-<ellipse fill="#fdb462" stroke="#000000" cx="323" cy="-104" rx="66.0069" ry="18"/>
-<text text-anchor="middle" x="323" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">HeaderEffects</text>
+<title>HomePageComponent</title>
+<polygon fill="#ffffb3" stroke="#000000" points="319.2562,-122 176.7438,-122 176.7438,-86 319.2562,-86 319.2562,-122"/>
+<text text-anchor="middle" x="248" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">HomePageComponent</text>
 </g>
-<!-- StoresModule -->
-<g id="node3" class="node">
-<title>StoresModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="295.0439,-187 292.0439,-191 271.0439,-191 268.0439,-187 200.9561,-187 200.9561,-151 295.0439,-151 295.0439,-187"/>
-<text text-anchor="middle" x="248" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">StoresModule</text>
-</g>
-<!-- HeaderEffects&#45;&gt;StoresModule -->
-<g id="edge1" class="edge">
-<title>HeaderEffects&#45;&gt;StoresModule</title>
-<path fill="none" stroke="#000000" d="M276.0092,-116.8419C276.0092,-116.8419 276.0092,-140.5231 276.0092,-140.5231"/>
-<polygon fill="#000000" stroke="#000000" points="272.5093,-140.523 276.0092,-150.5231 279.5093,-140.5231 272.5093,-140.523"/>
-</g>
-<!-- LayoutEffects -->
+<!-- HomePageModule -->
 <g id="node2" class="node">
-<title>LayoutEffects</title>
-<ellipse fill="#fdb462" stroke="#000000" cx="173" cy="-104" rx="65.9677" ry="18"/>
-<text text-anchor="middle" x="173" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">LayoutEffects</text>
+<title>HomePageModule</title>
+<polygon fill="#8dd3c7" stroke="#000000" points="308.4734,-187 305.4734,-191 284.4734,-191 281.4734,-187 187.5266,-187 187.5266,-151 308.4734,-151 308.4734,-187"/>
+<text text-anchor="middle" x="248" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">HomePageModule</text>
 </g>
-<!-- LayoutEffects&#45;&gt;StoresModule -->
-<g id="edge2" class="edge">
-<title>LayoutEffects&#45;&gt;StoresModule</title>
-<path fill="none" stroke="#000000" d="M219.731,-116.8419C219.731,-116.8419 219.731,-140.5231 219.731,-140.5231"/>
-<polygon fill="#000000" stroke="#000000" points="216.2311,-140.523 219.731,-150.5231 223.2311,-140.5231 216.2311,-140.523"/>
+<!-- HomePageComponent&#45;&gt;HomePageModule -->
+<g id="edge1" class="edge">
+<title>HomePageComponent&#45;&gt;HomePageModule</title>
+<path fill="none" stroke="#000000" d="M248,-122.1061C248,-122.1061 248,-140.991 248,-140.991"/>
+<polygon fill="#000000" stroke="#000000" points="244.5001,-140.9909 248,-150.991 251.5001,-140.991 244.5001,-140.9909"/>
 </g>
 </g>
 </svg>
@@ -129,7 +117,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/stores/stores.module.ts</code>
+            <code>src/app/pages/home-page/home-page.module.ts</code>
         </p>
 
 
@@ -137,7 +125,7 @@
             <h3>Description</h3>
         </p>
         <p class="comment">
-            <p>Load all Redux Stores via index.ts file</p>
+            <p>Home page Module</p>
 
         </p>
 
@@ -145,14 +133,11 @@
         <div class="container-fluid module">
             <div class="row">
                 <div class="col-sm-3">
-                    <h3>Providers<a href="https://angular.io/api/core/NgModule#providers" target="_blank"
-                            title="Official documentation about module providers"><span class="icon ion-ios-information-circle-outline"></a></h3>
+                    <h3>Declarations<a href="https://angular.io/api/core/NgModule#declarations" target="_blank"
+                            title="Official documentation about module declarations"><span class="icon ion-ios-information-circle-outline"></span></a></h3>
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <a href="../injectables/HeaderEffects.html">HeaderEffects</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="../injectables/LayoutEffects.html">LayoutEffects</a>
+                            <a href="../components/HomePageComponent.html">HomePageComponent</a>
                         </li>
                     </ul>
                 </div>
@@ -166,29 +151,20 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { CommonModule } from &#x27;@angular/common&#x27;;
-import { StoreModule } from &#x27;@ngrx/store&#x27;;
-import { EffectsModule } from &#x27;@ngrx/effects&#x27;;
-import { StoreRouterConnectingModule } from &#x27;@ngrx/router-store&#x27;;
-import { StoreDevtoolsModule } from &#x27;@ngrx/store-devtools&#x27;;
-import { reducers, effects } from &#x27;./stores&#x27;;
+import { HomePageComponent } from &#x27;./home-page.component&#x27;;
 
 /**
- * Load all Redux Stores via index.ts file
+ * Home page Module
  */
 @NgModule({
   imports: [
-    CommonModule,
-    StoreModule.forRoot(reducers),
-    EffectsModule.forRoot(effects),
-    StoreRouterConnectingModule.forRoot(),
-    StoreDevtoolsModule.instrument({ maxAge: 50 }),
+    CommonModule
   ],
-  declarations: [],
-  providers: [
-    ...effects,
+  declarations: [
+    HomePageComponent
   ]
 })
-export class StoresModule { }
+export class HomePageModule { }
 </code></pre>
     </div>
 </div>
@@ -223,7 +199,7 @@ export class StoresModule { }
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
-            var COMPODOC_CURRENT_PAGE_URL = 'StoresModule.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'HomePageModule.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

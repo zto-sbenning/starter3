@@ -113,54 +113,6 @@
     </table>
 </section>
 
-            <section>
-    <h3 id="constructor">Constructor</h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-<code>constructor(store: Store<any>)</code>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/services/layout/layout.service.ts:15</a></div>
-                            </td>
-                        </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                            <div>
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                    <td>Type</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>store</td>
-                                                  
-                                                        <td>
-                                                                    <code>Store&lt;any&gt;</code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-</section>
 
             <section>
     
@@ -189,13 +141,15 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/services/layout/layout.service.ts:19</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/services/layout/layout.service.ts:29</a></div>
                             </td>
                         </tr>
 
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Change the Layout type</p>
+</div>
 
                             <div class="io-description">
                                     <b>Parameters :</b>
@@ -205,6 +159,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -219,6 +174,10 @@
                                                     </td>
                                                     
 
+                                                        <td>
+                                                                <code><p>the new layout type</p>
+</code>
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -258,13 +217,15 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/services/layout/layout.service.ts:22</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/services/layout/layout.service.ts:36</a></div>
                             </td>
                         </tr>
 
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Set the Layout to Layout.simple</p>
+</div>
 
                             <div class="io-description">
                                 <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -313,10 +274,16 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/services/layout/layout.service.ts:15</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/services/layout/layout.service.ts:18</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Observable of current Layout type</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -340,13 +307,27 @@ import { SetLayoutAction, SimpleLayoutAction } from &#x27;../../stores/stores/la
 })
 export class LayoutService {
 
+  /**
+   * Observable of current Layout type
+   */
   layout$: Observable&lt;Layout&gt; &#x3D; this.store.pipe(select(selectLayoutStateLayout));
 
+  /**
+   * @ignore
+   */
   constructor(private store: Store&lt;any&gt;) { }
 
+  /**
+   * Change the Layout type
+   * @param layout the new layout type
+   */
   setLayout(layout: Layout) {
     this.store.dispatch(new SetLayoutAction({ layout }));
   }
+
+  /**
+   * Set the Layout to Layout.simple
+   */
   simpleLayout() {
     this.store.dispatch(new SimpleLayoutAction());
   }

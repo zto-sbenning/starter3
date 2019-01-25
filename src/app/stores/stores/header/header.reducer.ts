@@ -1,6 +1,11 @@
 import { HeaderState, initialHeaderState, Header } from './header.state';
 import { HeaderActions, HeaderActionType, SetHeaderAction, SetLinksAction, SetTitleAction } from './header.actions';
 
+/**
+ * A pur function who compute an HeaderState based on a previous one and a dispatched HeaderAction action
+ * @param state the previous state
+ * @param action the dispatched action
+ */
 export function headerStateReducer(state: HeaderState = initialHeaderState, action: HeaderActions): HeaderState {
     switch (action.type) {
         case HeaderActionType.set: {

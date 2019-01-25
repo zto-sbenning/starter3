@@ -63,6 +63,13 @@
             <code>src/app/stores/stores/header/header.actions.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Action to set the Header layout type to Header.simple</p>
+
+            </p>
 
 
             <p class="comment">
@@ -133,10 +140,16 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/stores/stores/header/header.actions.ts:17</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/stores/stores/header/header.actions.ts:36</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The action identifier</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -155,35 +168,92 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Action } from &#x27;@ngrx/store&#x27;;
 import { Header, Link } from &#x27;./header.state&#x27;;
 
+/**
+ * All Header Action types
+ */
 export enum HeaderActionType {
-    set &#x3D; &#x27;[Header Action Type] Set&#x27;,
-    simple &#x3D; &#x27;[Header Action Type] Simple&#x27;,
-    setTitle &#x3D; &#x27;[Header Action Type] Set Title&#x27;,
-    setLinks &#x3D; &#x27;[Header Action Type] Set Links&#x27;,
-    navigate &#x3D; &#x27;[Header Action Type] Navigate&#x27;
+  set &#x3D; &#x27;[Header Action Type] Set&#x27;,
+  simple &#x3D; &#x27;[Header Action Type] Simple&#x27;,
+  setTitle &#x3D; &#x27;[Header Action Type] Set Title&#x27;,
+  setLinks &#x3D; &#x27;[Header Action Type] Set Links&#x27;,
+  navigate &#x3D; &#x27;[Header Action Type] Navigate&#x27;
 }
 
+/**
+ * Action to set the Header layout type
+ */
 export class SetHeaderAction implements Action {
-    type &#x3D; HeaderActionType.set;
-    constructor(public payload: { header: Header }) {}
+  /**
+   * The action identifier
+   */
+  type &#x3D; HeaderActionType.set;
+  /**
+   * Action constructor
+   * @param payload the new Header layout type
+   */
+  constructor(public payload: { header: Header }) {}
 }
+/**
+ * Action to set the Header layout type to Header.simple
+ */
 export class SimpleHeaderAction implements Action {
-    type &#x3D; HeaderActionType.simple;
+  /**
+   * The action identifier
+   */
+  type &#x3D; HeaderActionType.simple;
 }
+/**
+ * Action to set the Header title
+ */
 export class SetTitleAction implements Action {
-    type &#x3D; HeaderActionType.setTitle;
-    constructor(public payload: { title: string }) {}
+  /**
+   * The action identifier
+   */
+  type &#x3D; HeaderActionType.setTitle;
+  /**
+   * Action constructor
+   * @param payload the new title
+   */
+  constructor(public payload: { title: string }) {}
 }
+/**
+ * Action to set the Header links
+ */
 export class SetLinksAction implements Action {
-    type &#x3D; HeaderActionType.setLinks;
-    constructor(public payload: { links: Link[] }) {}
+  /**
+   * The action identifier
+   */
+  type &#x3D; HeaderActionType.setLinks;
+  /**
+   * Action constructor
+   * @param payload the new link array
+   */
+  constructor(public payload: { links: Link[] }) {}
 }
+/**
+ * Action to navigate to a link path
+ */
 export class NavigateAction implements Action {
-    type &#x3D; HeaderActionType.navigate;
-    constructor(public payload: { link: Link }) {}
+  /**
+   * The action identifier
+   */
+  type &#x3D; HeaderActionType.navigate;
+  /**
+   * Action constructor
+   * @param payload the link to navigate to
+   */
+  constructor(public payload: { link: Link }) {}
 }
 
-export type HeaderActions &#x3D; SetHeaderAction | SimpleHeaderAction | SetTitleAction | SetLinksAction | NavigateAction;
+/**
+ * Union for all Header Actions
+ */
+export type HeaderActions &#x3D;
+  | SetHeaderAction
+  | SimpleHeaderAction
+  | SetTitleAction
+  | SetLinksAction
+  | NavigateAction;
 </code></pre>
     </div>
 </div>

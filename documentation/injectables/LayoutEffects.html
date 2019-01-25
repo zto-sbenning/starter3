@@ -59,190 +59,35 @@
             <code>src/app/stores/stores/layout/layout.effects.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Layout store effects</p>
 
-
-            <section>
-    <h3 id="index">Index</h3>
-    <table class="table table-sm table-bordered index-table">
-        <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <h6><b>Properties</b></h6>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                    <span class="modifier">Public</span>
-                                <a href="#actions">actions</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Public</span>
-                                <a href="#layout">layout</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
+            </p>
 
 
 
 
 
-
-        </tbody>
-    </table>
-</section>
-
-            <section>
-    <h3 id="constructor">Constructor</h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-<code>constructor(actions: Actions, layout: <a href="../injectables/LayoutService.html">LayoutService</a>)</code>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="6" class="link-to-prism">src/app/stores/stores/layout/layout.effects.ts:6</a></div>
-                            </td>
-                        </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                            <div>
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                    <td>Type</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>actions</td>
-                                                  
-                                                        <td>
-                                                                    <code>Actions</code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                        <td>layout</td>
-                                                  
-                                                        <td>
-                                                                    <code><a href="../injectables/LayoutService.html" target="_self" >LayoutService</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-</section>
-
-
-            <section>
-    
-        <h3 id="inputs">
-            Properties
-        </h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="actions"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Public</span>
-                            actions
-                            </b>
-                            <a href="#actions"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <span class="modifier-icon icon ion-ios-reset"></span><code>actions:     <code>Actions</code>
-</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code>Actions</code>
-
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/stores/stores/layout/layout.effects.ts:8</a></div>
-                            </td>
-                        </tr>
-
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="layout"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Public</span>
-                            layout
-                            </b>
-                            <a href="#layout"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <span class="modifier-icon icon ion-ios-reset"></span><code>layout:     <code><a href="../injectables/LayoutService.html" target="_self" >LayoutService</a></code>
-</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code><a href="../injectables/LayoutService.html" target="_self" >LayoutService</a></code>
-
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/stores/stores/layout/layout.effects.ts:9</a></div>
-                            </td>
-                        </tr>
-
-
-            </tbody>
-        </table>
-</section>
 
     </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &quot;@angular/core&quot;;
-import { Actions } from &quot;@ngrx/effects&quot;;
-import { LayoutService } from &quot;../../../services/layout/layout.service&quot;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+import { Actions } from &#x27;@ngrx/effects&#x27;;
+import { LayoutService } from &#x27;../../../services/layout/layout.service&#x27;;
 
+/**
+ * Layout store effects
+ */
 @Injectable()
 export class LayoutEffects {
+  /**
+   * @ignore
+   */
     constructor(
         public actions: Actions,
         public layout: LayoutService
