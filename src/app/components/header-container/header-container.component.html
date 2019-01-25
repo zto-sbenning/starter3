@@ -1,4 +1,0 @@
-<ng-container [ngSwitch]="header$|async">
-  <app-simple-header-presenter *ngSwitchCase="headerMap.simple" [title]="title$|async" [links]="links$|async" (navigateEvent)="navigate($event)"></app-simple-header-presenter>
-  <app-simple-header-presenter *ngSwitchDefault [title]="title$|async" [links]="links$|async" (navigateEvent)="navigate($event)"></app-simple-header-presenter>
-</ng-container>
