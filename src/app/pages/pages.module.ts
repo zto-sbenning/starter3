@@ -19,7 +19,11 @@ import { SharedModule } from '../shared/shared.module';
     HomePageComponent,
     AboutPageComponent,
     NotFoundPageComponent,
+<<<<<<< HEAD
     blah
+=======
+    blouh
+>>>>>>> test
   ]
 })
 export class PagesModule { }
