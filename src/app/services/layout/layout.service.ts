@@ -4,6 +4,9 @@ import { Observable } from 'rxjs';
 import { Layout, selectLayoutStateLayout } from '../../stores/stores/layout/layout.state';
 import { SetLayoutAction, SimpleLayoutAction } from '../../stores/stores/layout/layout.actions';
 
+/**
+ * Service to handle Layout data/actions
+ */
 @Injectable({
   providedIn: 'root'
 })

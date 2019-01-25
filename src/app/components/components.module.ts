@@ -6,6 +6,9 @@ import { LayoutContainerComponent } from './layout-container/layout-container.co
 import { SimpleLayoutPresenterComponent } from './layout-container/simple-layout-presenter/simple-layout-presenter.component';
 import { SharedModule } from '../shared/shared.module';
 
+/**
+ * Module for all non-page components declaration
+ */
 @NgModule({
   imports: [
     CommonModule,

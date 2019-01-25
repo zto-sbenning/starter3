@@ -17,5 +17,12 @@
       "es2017",
       "dom"
     ]
-  }
+  },
+  "exclude": [
+    "e2e/**/*",
+    "src/test.ts",
+    "src/environments/*",
+    "src/app/your-module/excluded.ts",
+    "**/*.spec.ts",
+  ]
 }

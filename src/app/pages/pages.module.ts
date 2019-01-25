@@ -6,6 +6,9 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
 import { ComponentsModule } from '../components/components.module';
 import { SharedModule } from '../shared/shared.module';
 
+/**
+ * Module for all page in the application
+ */
 @NgModule({
   imports: [
     CommonModule,

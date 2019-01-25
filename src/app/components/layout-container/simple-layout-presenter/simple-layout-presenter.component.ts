@@ -1,5 +1,8 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
+/**
+ * Simple layout
+ */
 @Component({
   selector: 'app-simple-layout-presenter',
   templateUrl: './simple-layout-presenter.component.html',
@@ -8,8 +11,14 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 })
 export class SimpleLayoutPresenterComponent implements OnInit {
 
+  /**
+   * @ignore
+   */
   constructor() { }
 
+  /**
+   * @ignore
+   */
   ngOnInit() {
   }
 

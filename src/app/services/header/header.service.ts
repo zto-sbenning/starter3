@@ -5,6 +5,9 @@ import { Header, Link, selectHeaderStateTitle, selectHeaderStateHeader, selectHe
 import { SetTitleAction, SetHeaderAction, SimpleHeaderAction, SetLinksAction, NavigateAction } from '../../stores/stores/header/header.actions';
 import { Observable } from 'rxjs';
 
+/**
+ * Service to handle Header data/actions
+ */
 @Injectable({
   providedIn: 'root'
 })
