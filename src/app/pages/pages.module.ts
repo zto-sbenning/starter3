@@ -18,7 +18,8 @@ import { SharedModule } from '../shared/shared.module';
   declarations: [
     HomePageComponent,
     AboutPageComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
+    blouh
   ]
 })
 export class PagesModule { }
