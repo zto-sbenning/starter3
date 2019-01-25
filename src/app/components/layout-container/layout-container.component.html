@@ -1,0 +1,4 @@
+<ng-container [ngSwitch]="layout$|async">
+  <app-simple-layout-presenter *ngSwitchCase="layoutMap.simple"></app-simple-layout-presenter>
+  <app-simple-layout-presenter *ngSwitchDefault></app-simple-layout-presenter>
+</ng-container>
